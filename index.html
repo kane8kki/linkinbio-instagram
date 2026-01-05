@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Links</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 40px;
+      padding: 40px;
+    }
+
+    .icon {
+      font-size: 64px;
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Custom size for ModDB icon (editable) */
+    :root {
+      --moddb-size: 75px; /* change this value if needed */
+    }
+
+    .icon img {
+      width: var(--moddb-size);
+      height: var(--moddb-size);
+      object-fit: contain;
+      filter: invert(1); /* makes the logo white */
+    }
+
+    .icon:hover {
+      transform: scale(1.15);
+      opacity: 0.8;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .icon {
+        font-size: 56px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .icon {
+        font-size: 52px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a class="icon" href="https://kane-kkicss.itch.io/" target="_blank" aria-label="itch.io">
+      <i class="fab fa-itch-io"></i>
+    </a>
+
+    <a class="icon" href="https://github.com/kane8kki" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a class="icon" href="https://www.youtube.com/@kane_kki" target="_blank" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+
+    <a class="icon" href="https://www.moddb.com/members/kanecss" target="_blank" aria-label="ModDB">
+      <img src="moddb.png" alt="ModDB" />
+    </a>
+
+    <a class="icon" href="https://steamcommunity.com/profiles/76561199132938918/" target="_blank" aria-label="Steam">
+      <i class="fab fa-steam"></i>
+    </a>
+  </div>
+
+</body>
+</html>
